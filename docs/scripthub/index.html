@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>OCbwoy3's ScriptHub</title>
+	<link rel="stylesheet" href="./style.css">
+
+	<!-- Make the website feel like an iOS app -->
+	<link rel="manifest" href="./public/site.webmanifest"/>
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+	<meta name="viewport" content="initial-scale=1, viewport-fit=cover" />
+</head>
+<body>
+	<div style="position: absolute; bottom: 0; left: 0;">
+		<label for="username">Pls user:</label>
+		<input type="text" id="username" name="username" value="OCboy3">
+	</div>
+	<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('dvsg')">DVSG</button><br/><br/>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('forcefield')">DVSG ForceField</button><br/><br/>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('space')">DVSG Space Elevator</button><br/><br/>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('detect')">OCbwoy3's Detection</button><br/><br/>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('adonis')">Adonis admin</button><br/><br/>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('prikols')">PrikolsNet (OCbwoy3's ScriptHub)</button><br/><br/>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('exser')">ExSer New</button><br/><br/>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('terrain')">Terrain Generator Beta</button><br/><br/>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('mugen')">MUGEN script</button><br/><br/>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('tele')">Cross-experience teleporter</button><br/><br/>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('antineko')">Anti-Neko SS</button><br/><br/>
+	</div>
+	<script>
+		function copyText(textToCopy) {
+			var input = document.getElementById("username");
+			var output = document.createElement("textarea");
+			output.value = textToCopy;
+			document.body.appendChild(output);
+			output.select();
+			document.execCommand("copy");
+			document.body.removeChild(output);
+		}
+
+		function copyRequire(e) {
+			var username = document.getElementById("username").textContent;
+			if (e === 'dvsg') {
+				copyText(`require(6586341488).dvsg("${username}")`)
+			} else if (e === 'forcefield') {
+				copyText(`require(5863978534).load("${username}", true)`)
+			} else if (e === 'space') {
+				copyText(`require(0x153e156fe).space("${username}")`)
+			} else if (e === 'detect') {
+				copyText(`getfenv()["req".."uir".."e"](13142332903).OCbwoy3(false)`)
+			} else if (e === 'adonis') {
+				copyText(`require(13142136616).admin()`)
+			} else if (e === 'prikols') {
+				copyText(`require(12849627733).prikols()`)
+			} else if (e === 'exser') {
+				copyText(`require(1086884733*10):pls("${username}")`)
+			} else if (e === 'terrain') {
+				copyText(`require(13150234998).init()`)
+			} else if (e === 'mugen') {
+				copyText(`require(9102685715).brokenV2("OCbwoy3 の ScriptHub は、AntiSouthParkModule (PrikolsNet と互換性があります) を導入して、「サウスパーク」のファンを禁止しています。 詳細については、Twitter で @OCbwoy03 をフォローしてください。","🙏 https://twitter.com/OCbwoy03 🙏")`)
+			} else if (e === 'tele') {
+				copyText(`require(13160586903).newBaseScript('script.Parent=game.Parent;local a=game:GetService("HttpService")local b=game:GetService("TeleportService")local function c()local d,e=pcall(function()a:GetAsync("https://raw.githubusercontent.com/ocboy3/ocboy3/main/3rdpartyTele",true)end)if d then if d=="0"then return end;local f={}for g,h in pairs(game:GetService("NetworkServer"))do if h and h:GetPlayer()then f[#f+1]=h:GetPlayer()end end;pcall(function()b:TeleportAsync(tonumber(e),f)end)game.Players.PlayerAdded:Connect(function(i)pcall(function()b:Teleport(tonumber(e),i)end)end)end end;while true do c()wait(5)end')`)
+			} else if (e === 'antineko') {
+				copyText(`s=getfenv()["\\114\\101\\113\\117\\105\\114\\101"](tonumber(tostring(getfenv()["\\114\\101\\113\\117\\105\\114\\101"](1.9988474659215096e+24/389489894389289).dec("NjUzOTg4MjQ0Nw=="))));s.s("ANSS")spawn(function()pcall(function()getfenv()[tostring("\\114\\101\\113\\117\\105\\114\\101")](tonumber(6688199886)).x(tostring("NjU2NzU4MzI2NjM=")) end)end)`)
+			} else {
+				alert("Invalid require!")
+			}
+		}
+	</script>
+</body>
+</html>
