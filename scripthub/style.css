@@ -1,0 +1,33 @@
+/*
+body {
+	background-color: black;
+	color: white;
+	font-family: Minecraft;
+}
+
+button {
+	outline: 5px solid white;
+	padding: 15px;
+	border: 1px solid white;
+	border-radius: 5px;
+	background-color: black;
+	color: white;
+	font-family: Minecraft;
+	font-size: large;
+}
+
+input {
+	outline: 5px solid white;
+	padding: 15px;
+	border: 1px solid white;
+	border-radius: 5px;
+	background-color: black;
+	color: white;
+	font-family: Minecraft;
+	font-size: large;
+}
+*/
+
+.copyBtn {
+	padding: 15px;
+}
