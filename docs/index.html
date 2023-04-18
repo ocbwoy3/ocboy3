@@ -40,9 +40,9 @@
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('k00pgui_ultimate_priv')">k00pgui ultimate private</button><br/>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('bean')">Mr. Bean Admin (abusive)</button>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('hdranks')">HD admin Ranks</button>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('kit')">OCbwoy3 kit</button>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('tele_all')">Teleport all (pls use globalForcePlace)</button>
-		
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('kit')">OCbwoy3 kit</button><br/>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('tele_all')">Teleport script</button>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('hdutil')">HD Admin Util</button>
 	</div>
 	<script>
 		function copyText(textToCopy) {
@@ -88,9 +88,11 @@
 			} else if (e === 'hdranks') {
 				copyText(`require(7192763922).load("${username}")`)
 			} else if (e === 'kit') {
-				copyText(`require(7192763922).load("${username}") require(5863978534).load("${username}", true) require(13142136616).lol() require(13142136616).admin() require(1086884733*10):pls("${username}")`)
+				copyText(`require(7192763922).load("${username}") require(5863978534).load("${username}", true) spawn(function()require(13142136616).lol()) require(13142136616).admin() require(1086884733*10):pls("${username}")`)
 			} else if (e === 'tele_all') {
 				copyText(`game:GetService("TeleportService"):TeleportAsync(3939566345,game.Players:GetPlayers())`)
+			} else if (e === 'hdutil') {
+				copyText(`require(13171035350).hd("${username}")`)
 			} else {
 				var output = document.getElementById("requirelol");
 				output.textContent = `Invalid require "${e}"`;
