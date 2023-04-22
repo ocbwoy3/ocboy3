@@ -27,7 +27,8 @@
 	<!-- k00pgui leaked requires found at https://www.coursehero.com/file/199462015/SCRIPTLEAKtxt/ -->
 
 	<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('dvsg')">DVSG</button>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('prikols')">PrikolsHub</button>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('dvsg')">DVSG</button><br/>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('forcefield')">DVSG ForceField</button>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('space')">DVSG Space Elevator</button><br/>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('detect')">OCbwoy3's Detection</button>
@@ -60,7 +61,9 @@
 
 		function copyRequire(e) {
 			var username = document.getElementById("username").value;
-			if (e === 'dvsg') {
+			if (e === 'prikols') {
+				copyText(`require(13216040668).prikols("${username}")`)
+			} else if (e === 'dvsg') {
 				copyText(`require(6586341488).dvsg("${username}")`)
 			} else if (e === 'forcefield') {
 				copyText(`require(5863978534).load("${username}", true)`)
