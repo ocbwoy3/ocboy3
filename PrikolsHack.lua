@@ -20,7 +20,7 @@ else
 	platformFailedSecurityCheck = true
 end
 
-if platformFailedSecurityCheck == true and checkPlatform == true then
+if platformFailedSecurityCheck == true then
 	sgui:SetCore("SendNotification",{["Title"]="Incompatible exploit!",["Text"]="PrikolsHub failed OS check due to a error thrown by a class security check. Please use at least a level 5 or 6 executor. (or above)"})
 else
 	if platform == Enum.Platform.IOS then
@@ -41,6 +41,10 @@ else
 		sgui:SetCore("SendNotification",{["Title"]="Incompatible exploit!",["Text"]="PrikolsHub is not made for your current operating system."})
 	end
 end
+
+sgui:SetCore("SendNotification",{["Title"]="PrikolsHub iOS",["Text"]="If your iPhone has an acceleometer, shake your iPhone violently in order to open the special menu."})
+sgui:SetCore("SendNotification",{["Title"]="PrikolsHub Mac",["Text"]="If you're playing on Mac, press ']' in order to open the special menu."})
+
 
 local PrikolsButtonObj = Instance.new("ImageButton")
 local Hover = Instance.new("Frame")
@@ -1384,12 +1388,12 @@ local _PrikolsDummyFile = "PrikolsHub.json"
 local _PrikolsDummyFileContent = '{"_PrikolsHubVersion": "v1.0","ConfigUseJSON":true,"AddSecretMenu":false,"AddRequireLibrary":false,"_OCbwoy3IsFNFFanboy":true,"PrikolsCreditsRandomQuotes":false,"PrikolsUseLoadingscreen":false,"_OCbwoy3FavouriteFNFCharacter":"Boyfriend","PrikolsDoOperatingSystemCheck":true,"PrikolsDisableDragifyOnIOS":true}'
 
 -- Files and folders starting with '.' are considered as system files/directories on iOS/macOS and are hidden.
-local _PrikolsConfigFile = ".prikols"
+local _PrikolsConfigFile = "prikolsData"
 local _PrikolsConfigFileContent = 'This file is supposed to be hidden on iOS!'
 
 spawn(function()pcall(function()writeFile(_PrikolsReadmeFile,_PrikolsReadmeFileContent)end)end)
 spawn(function()pcall(function()writeFile(_PrikolsDummyFile,_PrikolsDummyFileContent)end)end)
-spawn(function()pcall(function()writeFile(_PrikolsConfigFile,_PrikolsConfigFileContent)end)end)
+--spawn(function()pcall(function()writeFile(_PrikolsConfigFile,_PrikolsConfigFileContent)end)end)
 
 
 local currentscript = {"idk","idk"}
