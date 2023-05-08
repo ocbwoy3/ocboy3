@@ -1595,6 +1595,7 @@ local function PrikolsOverlay_fake_script()
 	_1_PrikolsMenu.LayoutOrder = 2
 	_1_PrikolsMenu.Selectable = false
 	_1_PrikolsMenu.Size = UDim2.new(1, 0, 0, 56)
+	_1_PrikolsMenu.Text = ""
 
 	Divider.Name = "Divider"
 	Divider.Parent = _1_PrikolsMenu
@@ -1656,6 +1657,7 @@ local function PrikolsOverlay_fake_script()
 	_2_CopyDiscord.LayoutOrder = 2
 	_2_CopyDiscord.Selectable = false
 	_2_CopyDiscord.Size = UDim2.new(1, 0, 0, 56)
+	_2_CopyDiscord.Text = ""
 
 	Divider_2.Name = "Divider"
 	Divider_2.Parent = _2_CopyDiscord
@@ -1713,6 +1715,7 @@ local function PrikolsOverlay_fake_script()
 	F_ExitPrikols.LayoutOrder = 8
 	F_ExitPrikols.Selectable = false
 	F_ExitPrikols.Size = UDim2.new(1, 0, 0, 56)
+	F_ExitPrikols.Text = ""
 
 	CellContents_3.Name = "CellContents"
 	CellContents_3.Parent = F_ExitPrikols
