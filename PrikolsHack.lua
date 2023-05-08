@@ -7,14 +7,20 @@ local sgui = game:GetService("StarterGui")
 local platformFailedSecurityCheck = false
 local platform = nil
 
-local success,err = pcall(function()uis:GetPlatform()end)
-if not success then
-	platformFailedSecurityCheck = true
-else
-	platform = err or Enum.Platform.None
-end	
+local checkPlatform = false
 
-if platformFailedSecurityCheck == true then
+if checkPlatform == true then
+	local success,err = pcall(function()uis:GetPlatform()end)
+	if not success then
+		platformFailedSecurityCheck = true
+	else
+		platform = err or Enum.Platform.None
+	end	
+else
+	platformFailedSecurityCheck = true
+end
+
+if platformFailedSecurityCheck == true and checkPlatform == true then
 	sgui:SetCore("SendNotification",{["Title"]="Incompatible exploit!",["Text"]="PrikolsHub failed OS check due to a error thrown by a class security check. Please use at least a level 5 or 6 executor. (or above)"})
 else
 	if platform == Enum.Platform.IOS then
@@ -1440,7 +1446,7 @@ local function PrikolsMain_fake_script()
 	menu.F_Credits.MouseLeave:Connect(function()
 		menu.F_Credits.Hover.Visible = false
 	end)
-	
+
 	Close.MouseButton1Click:Connect(function()
 		Main.Visible = false
 	end)
@@ -1863,7 +1869,7 @@ local function PrikolsOverlay_fake_script()
 			end
 		end)
 	end
-	
+
 	-- Discord button
 	_2_CopyDiscord.MouseButton1Click:Connect(function()
 		pcall(function()copyToClipboard(_PrikolsDiscord)end)
@@ -1873,12 +1879,12 @@ local function PrikolsOverlay_fake_script()
 			Duration = 5;
 		})
 	end)
-	
+
 	_1_PrikolsMenu.MouseButton1Click:Connect(function()
 		PrikolsHub.Main.Visible = true
 		xMenu.Visible = false
 	end)
-	
+
 	F_ExitPrikols.MouseButton1Click:Connect(function()
 		xMenu.Visible = false
 	end)
