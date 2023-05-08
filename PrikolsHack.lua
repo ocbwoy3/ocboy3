@@ -238,7 +238,9 @@ local PrikolsToggle = Instance.new("TextButton")
 --Properties:
 
 PrikolsHub.Name = "PrikolsHub"
-PrikolsHub.Parent = game.CoreGui or game.Players.LocalPlayer.PlayerGui
+local s,e = pcall(function()PrikolsHub.Parent = game.CoreGui;end)
+if not s then local s,e = pcall(function()PrikolsHub.Parent = game.Players.LocalPlayer.PlayerGui;end) end
+
 PrikolsHub.DisplayOrder = 999999999
 PrikolsHub.ResetOnSpawn = false
 
@@ -1467,7 +1469,8 @@ local function PrikolsMain_fake_script()
 			vwr_scripts:ClearAllChildren()
 			local xd = Instance.new("UIListLayout")
 			xd.SortOrder = Enum.SortOrder.Name
-			xd.PaddingTop = UDim.new(0, 4)
+			xd.FillDirection = Enum.FillDirection.Vertical
+			xd.Padding = UDim.new(0,4)
 			xd.Parent = vwr_scripts
 			for i2,v2 in pairs(v) do
 				local temp2 = PrikolsButtonObj:Clone()
@@ -1553,7 +1556,9 @@ local function PrikolsOverlay_fake_script()
 	--Properties:
 
 	PrikolsOverlayApp.Name = "PrikolsOverlayApp"
-	PrikolsOverlayApp.Parent = game.CoreGui
+	local s,e = pcall(function()PrikolsOverlayApp.Parent = game.CoreGui;end)
+	if not s then local s,e = pcall(function()PrikolsOverlayApp.Parent = game.Players.LocalPlayer.PlayerGui;end) end
+
 	PrikolsOverlayApp.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 	PrikolsOverlayApp.IgnoreGuiInset = true
 	PrikolsOverlayApp.ScreenInsets = Enum.ScreenInsets.None
