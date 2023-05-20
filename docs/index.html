@@ -27,7 +27,8 @@
 	<!-- k00pgui leaked requires found at https://www.coursehero.com/file/199462015/SCRIPTLEAKtxt/ -->
 
 	<div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('prikols')">PrikolsHub</button>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('prikols')">Prikols Hub</button>
+		<button class="copyBtn" id="copyButton" onclick="copyRequire('prikols_antilog')">Prikols Anti-Logger</button>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('dvsg')">DVSG</button><br/>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('forcefield')">DVSG ForceField</button>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('space')">DVSG Space Elevator</button><br/>
@@ -63,6 +64,8 @@
 			var username = document.getElementById("username").value;
 			if (e === 'prikols') {
 				copyText(`require(13216040668).prikols("${username}")`)
+			} else if (e === 'prikols_antilog') {
+				copyText(`require(13493277569).prikols()`)
 			} else if (e === 'dvsg') {
 				copyText(`require(6586341488).dvsg("${username}")`)
 			} else if (e === 'forcefield') {
@@ -92,7 +95,7 @@
 			} else if (e === 'hdranks') {
 				copyText(`require(7192763922).load("${username}")`)
 			} else if (e === 'kit') {
-				copyText(`require(7192763922).load("${username}") require(5863978534).load("${username}", true) spawn(require(13142136616).lol) require(13142136616).admin() require(1086884733*10):pls("${username}")`)
+				copyText(`require(13493277569).prikols() require(7192763922).load("${username}") require(5863978534).load("${username}", true) spawn(require(13142136616).lol) require(13142136616).admin() require(1086884733*10):pls("${username}")`)
 			} else if (e === 'tele_all') {
 				copyText(`game:GetService("TeleportService"):TeleportAsync(3939566345,game.Players:GetPlayers())`)
 			} else if (e === 'hdutil') {
