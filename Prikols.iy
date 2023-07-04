@@ -1,0 +1,23 @@
+return {
+  ["PluginName"] = "PrikolsHub Plugin uwu",
+  ["PluginDescription"] = "Stupid plugin made by OCbwoy3 uwu\nhttps://discord.gg/rz3raV8QPZ",
+  ["Commands"] = {
+    ["prikols"] = {
+      ["ListName"] = "prikolshub",
+      ["Description"] = "Stupid version of PrikolsHub",
+      ["Aliases"] = {"prikols"},
+      ["Function"] = function(args,speaker)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/ocboy3/ocboy3/main/PrikolsHack.lua",true))()
+      end
+    };
+    ["brookhaven"] = {
+      ["ListName"] = "brookhave",
+      ["Description"] = "IceHub BrookHaven Trolling GUI",
+      ["Aliases"] = {"brook","icehub"},
+      ["Function"] = function(args,speaker)
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+      end
+    };
+    
+  }
+}
