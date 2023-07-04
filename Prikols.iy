@@ -10,12 +10,20 @@ return {
         loadstring(game:HttpGet("https://raw.githubusercontent.com/ocboy3/ocboy3/main/PrikolsHack.lua",true))()
       end
     };
-    ["brookhaven"] = {
-      ["ListName"] = "brookhave",
+    ["ice_brookhaven"] = {
+      ["ListName"] = "IceHub BrookHaven",
       ["Description"] = "IceHub BrookHaven Trolling GUI",
-      ["Aliases"] = {"brook","icehub"},
+      ["Aliases"] = {"brookhaven","icehub"},
       ["Function"] = function(args,speaker)
         loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+      end
+    };
+    ["ms_doors"] = {
+      ["ListName"] = "MSDOORS",
+      ["Description"] = "Roblox cheat for DOORS horror game.",
+      ["Aliases"] = {"msdoors","doors"},
+      ["Function"] = function(args,speaker)
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/mstudio45/MSDOORS/main/MSHUB_Loader.lua"),true))()
       end
     };
     
