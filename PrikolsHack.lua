@@ -21,24 +21,24 @@ else
 end
 
 if platformFailedSecurityCheck == true then
-	sgui:SetCore("SendNotification",{["Title"]="Incompatible exploit!",["Text"]="PrikolsHub failed OS check due to a error thrown by a class security check. Please use at least a level 5 or 6 executor. (or above)"})
+	sgui:SetCore("SendNotification",{["Title"]="NAHUJ",["Text"]="PrikolsHub failed OS check due to a error thrown by a class security check. Please use at least a level 5 or 6 executor. (or above)"})
 else
 	if platform == Enum.Platform.IOS then
-		sgui:SetCore("SendNotification",{["Title"]="Compatible exploit!",["Text"]="PrikolsHub is compatible with ScriptWare iOS!"})
+		sgui:SetCore("SendNotification",{["Title"]="Incompatible exploit!",["Text"]="PrikolsHub is not compatible with ScriptWare iOS!"})
 	elseif platform == Enum.Platform.Android then
-		sgui:SetCore("SendNotification",{["Title"]="Incompatible exploit!",["Text"]="PrikolsHub is not made for Android. Your user experience can be impacted."})
+		sgui:SetCore("SendNotification",{["Title"]="Compatible exploit!",["Text"]="PrikolsHub is not made for Fluxus Android, but might compatible. Your user experience can be impacted."})
 	elseif platform == Enum.Platform.UWP then
-		sgui:SetCore("SendNotification",{["Title"]="Incompatible exploit!",["Text"]="PrikolsHub is not made for the Roblox UWP app. Please consider using iOS or macOS."})
+		sgui:SetCore("SendNotification",{["Title"]="Incompatible exploit!",["Text"]="PrikolsHub is not made for the Roblox UWP app. Celery? WTF!"})
 	elseif platform == Enum.Platform.Windows then
 		sgui:SetCore("SendNotification",{["Title"]="Incompatible exploit!",["Text"]="PrikolsHub is not made for Windows NT. Please consider using iOS or macOS."})
 	elseif platform == Enum.Platform.Linux then
-		sgui:SetCore("SendNotification",{["Title"]="Incompatible exploit!",["Text"]="PrikolsHub is not made for Linux, but you can exploit on Linux, if that's possible."})
+		sgui:SetCore("SendNotification",{["Title"]="Incompatible exploit!",["Text"]="PrikolsHub is not made for Linux, but you can probably exploit on Linux, if that's possible."})
 	elseif platform == Enum.Platform.OSX then
-		sgui:SetCore("SendNotification",{["Title"]="Compatible exploit!",["Text"]="PrikolsHub is compatible with macOS!"})
+		sgui:SetCore("SendNotification",{["Title"]="Compatible exploit!",["Text"]="PrikolsHub is compatible with macOS! I GUESS SO!"})
 	elseif platform == Enum.Platform.None then
-		sgui:SetCore("SendNotification",{["Title"]="Incompatible exploit!",["Text"]="PrikolsHub cannot detect your operating system. User experience may be impacted."})
+		sgui:SetCore("SendNotification",{["Title"]="Wtf?",["Text"]="PrikolsHub cannot detect your operating system. User experience may be impacted."})
 	else
-		sgui:SetCore("SendNotification",{["Title"]="Incompatible exploit!",["Text"]="PrikolsHub is not made for your current operating system."})
+		sgui:SetCore("SendNotification",{["Title"]="oh no",["Text"]="PrikolsHub is not made for your current operating system."})
 	end
 end
 
@@ -1879,7 +1879,7 @@ local function PrikolsOverlay_fake_script()
 		pcall(function()copyToClipboard(_PrikolsDiscord)end)
 		game:GetService("StarterGui"):SetCore( "SendNotification", {
 			Title = "PrikolsHub";
-			Text = "Server link copied to system clipboard.";
+			Text = "Server link copied to system clipboard.\n"..tostring(_PrikolsDiscord);
 			Duration = 5;
 		})
 	end)
