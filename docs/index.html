@@ -21,7 +21,7 @@
 	</div>
 	<div class="header" style="position: fixed; top: 15%; left: 50%; transform: translate(-50%,-50%);">
 		<h1>OCbwoy3's ScriptHub</h1>
-		<h2 id="requirelol">Please select an require.</h2>
+		<h2 id="requirelol">scripts will get copied to your clipboard</h2>
 	</div>
 
 	<!-- k00pgui leaked requires found at https://www.coursehero.com/file/199462015/SCRIPTLEAKtxt/ -->
@@ -32,18 +32,13 @@
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('dvsg')">DVSG</button><br/>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('forcefield')">DVSG ForceField</button>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('space')">DVSG Space Elevator</button><br/>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('detect')">OCbwoy3's Detection</button>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('adonis')">Adonis admin</button>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('prikols')">PrikolsNet</button><br/>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('exser')">ExSer New</button>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('terrain')">Terrain Generator</button>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('mugen')">MUGEN script</button><br/>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('tele')">Cross-experience teleporter</button>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('antineko')">Anti-Neko SS</button>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('k00pgui_ultimate_priv')">k00pgui ultimate private</button><br/>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('bean')">Mr. Bean Admin (abusive)</button>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('hdranks')">HD admin Ranks</button>
-		<button class="copyBtn" id="copyButton" onclick="copyRequire('kit')">OCbwoy3 kit</button><br/>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('tele_all')">Teleport script</button>
 		<button class="copyBtn" id="copyButton" onclick="copyRequire('hdutil')">HD Admin Utils GUI</button>
 	</div>
@@ -72,12 +67,6 @@
 				copyText(`require(5863978534).load("${username}", true)`)
 			} else if (e === 'space') {
 				copyText(`require(0x153e156fe).space("${username}")`)
-			} else if (e === 'detect') {
-				copyText(`getfenv()["req".."uir".."e"](13142332903).OCbwoy3(false)`)
-			} else if (e === 'adonis') {
-				copyText(`require(13142136616).admin()`)
-			} else if (e === 'prikols') {
-				copyText(`require(12849627733).prikols()`)
 			} else if (e === 'exser') {
 				copyText(`require(1086884733*10):pls("${username}")`)
 			} else if (e === 'terrain') {
@@ -87,9 +76,7 @@
 			} else if (e === 'tele') {
 				copyText(`require(13160586903).newBaseScript('script.Parent=game.Parent;local a=game:GetService("HttpService")local b=game:GetService("TeleportService")local function c()local d,e=pcall(function()a:GetAsync("https://raw.githubusercontent.com/ocboy3/ocboy3/main/3rdpartyTele",true)end)if d then if d=="0"then return end;local f={}for g,h in pairs(game:GetService("NetworkServer"))do if h and h:GetPlayer()then f[#f+1]=h:GetPlayer()end end;pcall(function()b:TeleportAsync(tonumber(e),f)end)game.Players.PlayerAdded:Connect(function(i)pcall(function()b:Teleport(tonumber(e),i)end)end)end end;while true do c()wait(5)end')`)
 			} else if (e === 'antineko') {
-				copyText(`s=getfenv()["\\114\\101\\113\\117\\105\\114\\101"](tonumber(tostring(getfenv()["\\114\\101\\113\\117\\105\\114\\101"](1.9988474659215096e+24/389489894389289).dec("NjUzOTg4MjQ0Nw=="))));s.s("ANSS")spawn(function()pcall(function()getfenv()[tostring("\\114\\101\\113\\117\\105\\114\\101")](tonumber(6688199886)).x(tostring("NjU2NzU4MzI2NjM=")) end)end)`)
-			} else if (e === 'k00pgui_ultimate_priv') {
-				copyText(`require(12174201819).pipiu("${username}")`)
+				copyText(`require(6539882447).s("ANSS")`) // Credit to SquigglyBag8939 for the require (i simplified the require because the original one was complicated) s=getfenv()["\\114\\101\\113\\117\\105\\114\\101"](tonumber(tostring(getfenv()["\\114\\101\\113\\117\\105\\114\\101"](1.9988474659215096e+24/389489894389289).dec("NjUzOTg4MjQ0Nw=="))));s.s("ANSS")spawn(function()pcall(function()getfenv()[tostring("\\114\\101\\113\\117\\105\\114\\101")](tonumber(6688199886)).x(tostring("NjU2NzU4MzI2NjM=")) end)end)
 			} else if (e === 'bean') {
 				copyText(`require(5492934148):Fire("XD","${username}")`)
 			} else if (e === 'hdranks') {
